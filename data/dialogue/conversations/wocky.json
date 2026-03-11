@@ -1,0 +1,79 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Yo! Long time no see!!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "wap",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Taking your new girl on a date?"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Yea", ", what about it?"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "wap",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["She's way out of your league bro..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["She'd be perfect for someone like me!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "wave",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Show me what you've got then!"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "what",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["...Really Girlfriend?"]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="gf_port.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="gf0000" x="631" y="0" width="291" height="315" frameX="-141" frameY="-87" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="gflaugh0000" x="317" y="0" width="314" height="320" frameX="-112" frameY="-82" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="gfwave0000" x="0" y="0" width="317" height="321" frameX="-108" frameY="-81" frameWidth="550" frameHeight="400"/>
+</TextureAtlas>

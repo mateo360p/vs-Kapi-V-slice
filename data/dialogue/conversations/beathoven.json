@@ -1,0 +1,71 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Not bad for a cat!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["See what did I tell ya, BF?"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "what",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["That literally means nothing-"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Sure.", "Let's just move on."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Don't expect me to go easy..."]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["beep di bop *shitting on him*"]
+        }
+    ]
+}

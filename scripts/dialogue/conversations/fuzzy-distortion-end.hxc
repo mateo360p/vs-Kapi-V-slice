@@ -1,0 +1,17 @@
+import funkin.play.cutscene.dialogue.Conversation;
+import flixel.sound.FlxSound;
+import funkin.play.PlayState;
+import flixel.FlxG;
+
+class FuzzyDistortionEndingConversation extends Conversation
+{
+    function new()
+    {
+        super('fuzzy-distortion-end');
+    }
+
+    override public function onDialogueEnd(event:DialogueScriptEvent):Void {
+        super.onDialogueEnd(event);
+        PlayState.instance.endSong();
+    }
+}

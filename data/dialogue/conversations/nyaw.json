@@ -1,0 +1,103 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(My dance-pad took quite the damage.)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(I should probably cool down a little...)"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "laugh",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["This is entertaining!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(There's a lot more people...)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(And the arcade is closing soon...)"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["How about one more song, Kapi?"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Uh", ", alright!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Hopefully I can impress her this time.)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Let's settle this"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["No holding back."]
+        }
+    ]
+}

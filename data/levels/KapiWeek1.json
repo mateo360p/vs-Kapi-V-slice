@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "name": "B-B-BREAK DOWN!",
+  "titleAsset": "storymenu/titles/kapiweek1",
+  "props": [
+    {
+      "assetPath": "storymenu/props/kapi_bg",
+      "scale": 1,
+      "offsets": [
+        -12,
+        52
+      ],
+      "animations": [
+        {
+          "name": "idle",
+          "prefix": "kapi 1 week0",
+          "frameRate": 0,
+          "looped": false
+        }
+      ]
+    }
+  ],
+  "background": "#F9CF51",
+  "songs": [
+    "wocky",
+    "beathoven",
+    "hairball",
+    "nyaw"
+  ]
+}

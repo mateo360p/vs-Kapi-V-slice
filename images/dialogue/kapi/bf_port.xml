@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="bf_port.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="bf0000" x="0" y="0" width="347" height="319" frameX="-114" frameY="-83" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="bftalk0000" x="0" y="319" width="341" height="319" frameX="-120" frameY="-83" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="bfwhat0000" x="347" y="0" width="341" height="319" frameX="-120" frameY="-83" frameWidth="550" frameHeight="400"/>
+</TextureAtlas>

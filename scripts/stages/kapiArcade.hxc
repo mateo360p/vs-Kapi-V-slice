@@ -1,0 +1,65 @@
+import flixel.FlxG;
+import funkin.play.stage.Stage;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import flixel.math.FlxMath;
+import flixel.tweens.misc.VarTween;
+import flixel.tweens.FlxTween;
+import flixel.group.FlxTypedSpriteGroup;
+import flixel.tweens.FlxEase;
+import funkin.audio.FunkinSound;
+import flixel.util.FlxColor;
+
+class KapiArcadeStage extends Stage
+{
+    function new() {
+        super('kapiArcade');
+    }
+
+    override function onCreate(event:ScriptEvent):Void
+    {
+        super.onCreate(event);
+
+        switch ((PlayState.instance.currentSong.id ?? '').toLowerCase()) {
+            case "wocky":
+                getNamedProp('lilguys')?.kill();
+                getNamedProp('lilguys')?.visible = false;
+            default:
+                // nothing :O
+        }
+
+        //getNamedProp('lights')?.color = FlxColor.BLACK;
+    }
+
+    /*override function onUpdate(event:UpdateScriptEvent):Void
+    {
+        super.onUpdate(event);
+    }
+
+    override function onDestroy(event:ScriptEvent):Void
+    {
+        super.onDestroy(event);
+    }
+
+    override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+    {
+        super.addCharacter(character, charType);
+    }*/
+
+    /*override function onSongRetry(event:ScriptEvent):Void
+    {
+        super.onSongRetry(event);
+        getNamedProp('lights')?.color = FlxColor.BLACK; // looks a lil weird
+    }
+
+    public function onCountdownEnd(event:CountdownScriptEvent):Void {
+        super.onCountdownEnd(event);
+        getNamedProp('lights')?.color = FlxColor.WHITE;
+    }*/
+
+    override function onBeatHit(event:SongTimeScriptEvent):Void {
+        super.onBeatHit(event);
+        //if (event.beat > 0) getNamedProp('lights')?.visible = true;
+        getNamedProp('lights')?.playAnimation("idle" + FlxG.random.int(1, 3), true);
+    }
+}

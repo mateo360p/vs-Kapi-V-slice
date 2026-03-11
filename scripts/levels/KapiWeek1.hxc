@@ -1,0 +1,30 @@
+import funkin.ui.story.Level;
+import funkin.save.Save;
+import flixel.FlxG;
+import funkin.ui.story.StoryMenuState;
+
+class KapiWeekOneLevel extends Level
+{
+  function new() {
+    super('KapiWeek1');
+  }
+
+  override function getSongs():Array<String> {
+    var daSongs:Array<String> = super.getSongs().copy();
+
+    if (!Std.isOfType(FlxG.state, StoryMenuState)) { // In storymode returns terminate
+      daSongs.push("fuzzy-distortion");
+    }
+
+    return daSongs; // If hasn't passed the week
+  }
+
+  override function getSongDisplayNames(difficulty:String):Array<String> {
+    var songList:Array<String> = getSongs() ?? [];
+    songList.remove("fuzzy-distortion"); // fkin bait song
+    var songNameList:Array<String> = songList.map(function(songId:String) {
+      return Level.getSongDisplayName(songId, difficulty);
+    });
+    return songNameList;
+  }
+}

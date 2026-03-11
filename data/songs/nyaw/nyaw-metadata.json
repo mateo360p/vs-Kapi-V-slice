@@ -1,0 +1,23 @@
+{
+	"timeFormat": "ms",
+	"artist": "PaperKitty",
+	"charter": "Unknown",
+	"playData": {
+		"stage": "kapiArcadeClosed",
+		"noteStyle": "kapiW1",
+		"ratings": {
+			"easy": 8,
+			"hard": 11,
+			"normal": 10
+		},
+		"album": "arcadeShowdown",
+		"difficulties": ["easy", "normal", "hard"],
+		"characters": {"girlfriend": "gf", "opponent": "kapi", "player": "kapi_bf"}
+	},
+	"songName": "Nyaw",
+	"timeChanges": [
+		{"t": 0, "bpm": 178}
+	],
+	"generatedBy": "Psych Engine v1.0.3 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}

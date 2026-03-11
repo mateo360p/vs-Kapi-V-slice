@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="kapi_port.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="kapi0000" x="590" y="308" width="295" height="307" frameX="-128" frameY="-47" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="kapiconfused0000" x="295" y="308" width="295" height="307" frameX="-128" frameY="-47" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="kapicute0000" x="295" y="0" width="295" height="307" frameX="-128" frameY="-47" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="kapimad0000" x="590" y="0" width="295" height="307" frameX="-128" frameY="-47" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="kapistare0000" x="0" y="308" width="295" height="307" frameX="-128" frameY="-47" frameWidth="550" frameHeight="400"/>
+	<SubTexture name="wap0000" x="0" y="0" width="295" height="308" frameX="-128" frameY="-46" frameWidth="550" frameHeight="400"/>
+</TextureAtlas>

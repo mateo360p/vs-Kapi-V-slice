@@ -1,0 +1,41 @@
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import funkin.play.song.Song;
+import flixel.FlxG;
+
+import Date;
+
+class KapiBeathovenSong extends Song {
+    var hasPlayedCutscene:Bool;
+    public function new() {
+        super('beathoven');
+    }
+
+    override function onCreate(event:ScriptEvent):Void {
+        super.onCreate(event);
+
+        hasPlayedCutscene = false;
+    }
+
+    override function onSongRetry(event:ScriptEvent):Void {
+        super.onSongRetry(event);
+        hasPlayedCutscene = true;
+    }
+
+    override function onCountdownStart(event:CountdownScriptEvent):Void {
+        super.onCountdownStart(event);
+        if (!(PlayStatePlaylist.isStoryMode) || PlayState.instance.isChartingMode || hasPlayedCutscene) return;
+
+        hasPlayedCutscene = true;
+        event.cancel();
+        startDialogue();
+    }
+
+    function startDialogue() {
+        PlayState.instance.startConversation('beathoven');
+    }
+
+    override function onDialogueEnd() {
+        Countdown.performCountdown();
+    }
+}

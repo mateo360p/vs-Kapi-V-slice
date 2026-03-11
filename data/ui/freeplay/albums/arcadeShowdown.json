@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "name": "VS. KAPI WEEK 1 - ARCADE SHOWDOWN ALBUM",
+  "artists": [
+    "PaperKitty",
+    "Mike Geno"
+  ],
+  "albumArtAsset": "freeplay/albumRoll/arcadeShowdown_album",
+  "albumTitleAsset": "freeplay/albumRoll/arcadeShowdown-text",
+    "albumTitleOffsets": [-10, -10]
+}
