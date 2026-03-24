@@ -8,9 +8,9 @@
     },
 
     "music": {
-        "asset": "",
+        "asset": "dialogue/fuzzball",
         "fadeTime": 0,
-        "looped": false
+        "looped": true
     },
 
     "outro": {

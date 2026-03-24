@@ -89,7 +89,7 @@
             "box": "kapiBox",
             "boxAnimation": "idle",
 
-            "text": ["Uh...", " no you didn't."]
+            "text": ["Uh...", " you didn't beat him."]
         },
         {
             "speaker": "kapi_gf",
@@ -113,7 +113,7 @@
             "box": "kapiBox",
             "boxAnimation": "idle",
 
-            "text": ["You really thought I would leave my Boyfriend for some stranger?"]
+            "text": ["You really thought I would leave my boyfriend for some stranger?"]
         },
         {
             "speaker": "kapi_bf",

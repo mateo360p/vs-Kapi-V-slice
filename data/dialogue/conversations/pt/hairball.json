@@ -1,0 +1,63 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "laugh",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Oh, voces dois..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Vamos. Obvio que eu ganhei."]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "what",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ha, nem ferrando."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ta.", " Vou te mostrar."]
+        }
+    ]
+}

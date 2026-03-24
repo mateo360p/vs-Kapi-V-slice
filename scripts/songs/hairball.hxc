@@ -1,6 +1,8 @@
+package dipazio.song;
+
 import funkin.play.PlayState;
 import funkin.play.PlayStatePlaylist;
-import funkin.play.song.Song;
+import dipazio.song.KapiSong;
 import flixel.FlxG;
 import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxEase;
@@ -9,41 +11,35 @@ import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
 import funkin.play.Countdown;
 
-class KapiHairballSong extends Song {
-    var hasPlayedCutscene:Bool;
+class KapiHairballSong extends KapiSong {
     public function new() {
-        super('hairball');
+        super('hairball', null,
+        {
+            start: {
+                cutscene: {
+                    enabled: true,
+                    forbiddenVariants: ["erect"]
+                },
+                dialogue: {
+                    enabled: true,
+                    forbiddenVariants: ["erect"]
+                }
+            },
+            discord: {
+                enabled: true,
+                albumMod: "Kapi"
+            }
+        });
+        cutscene = startKapiCutscene;
     }
 
-    override function onCreate(event:ScriptEvent):Void {
-        super.onCreate(event);
-
-        hasPlayedCutscene = false;
-    }
-
-    override function onSongRetry(event:ScriptEvent):Void {
-        super.onSongRetry(event);
-        hasPlayedCutscene = true;
-    }
-
-    override function onCountdownStart(event:CountdownScriptEvent):Void {
-        super.onCountdownStart(event);
-        if (!(PlayStatePlaylist.isStoryMode) || PlayState.instance.isChartingMode || hasPlayedCutscene) return;
-
-        hasPlayedCutscene = true;
-        event.cancel();
-        startCutscene(false);
-    }
-
-    function startCutscene(?holasoypicoyesteesmibanio:Bool = false) {
+    function startKapiCutscene(isEnd:Bool) {
         trace('funny hairball lil Cutscene :o!!!');
 
         // --- Variables setup
-        PlayState.instance.isInCutscene = true;
-        PlayState.instance.mayPauseGame = false;
+        //PlayState.instance.isInCutscene = true;
+        //PlayState.instance.mayPauseGame = false;
 
-        var isPico = holasoypicoyesteesmibanio; // sorry for this line i had to make a reference :u
-        if (isPico) return; // heheheha
         var kapi = PlayState.instance.currentStage.getDad();
         var player = PlayState.instance.currentStage.getBoyfriend();
 
@@ -63,33 +59,15 @@ class KapiHairballSong extends Song {
 
         PlayState.instance.camHUD.visible = false;
 
-        // --- Helpers
-        function startChit() {
-            kapi.playAnimation("ddrStomp", true);
-            FunkinSound.playOnce(Paths.sound("kapi_brokenpad"));
-
-            kapi.animation.onFinish.add(onKapiStopCringe);
-        }
-
-        // --- Actual cutscene
-        startChit();
+        kapi.playAnimation("ddrStomp", true);
+        FunkinSound.playOnce(Paths.sound("kapi_brokenpad"));
+        kapi.animation.onFinish.add(onKapiStopCringe);
     }
 
     function onKapiStopCringe(name:String) {
         if (name != "ddrStomp") return;
 
         PlayState.instance.currentStage.getDad().animation.onFinish.remove(onKapiStopCringe);
-        //kapi.playAnimation("idle", true);
-        startDialogue();
-    }
-
-    function startDialogue() {
-        PlayState.instance.isInCutscene = false;
-        PlayState.instance.mayPauseGame = true;
-        PlayState.instance.startConversation('hairball');
-    }
-
-    override function onDialogueEnd() {
-        Countdown.performCountdown();
+        endStory(false);
     }
 }

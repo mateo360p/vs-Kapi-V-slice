@@ -1,0 +1,79 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "dialogue/fuzzball",
+        "fadeTime": 0,
+        "looped": true
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Bro! Tanto tiempo de no verte!!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "wap",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["LLevando a tu nueva chica a una cita?"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Si", ", que tiene?"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "wap",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ella esta muy fuera de tu liga bro..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ella seria perfecta para alguien como yo!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "wave",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Entonces muestrame lo que tienes!"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "what",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["...Enserio Girlfriend?"]
+        }
+    ]
+}

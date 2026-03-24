@@ -1,41 +1,25 @@
+package dipazio.song;
+
 import funkin.play.PlayState;
 import funkin.play.PlayStatePlaylist;
-import funkin.play.song.Song;
+import dipazio.song.KapiSong;
 import flixel.FlxG;
 
 import Date;
 
-class KapiBeathovenSong extends Song {
-    var hasPlayedCutscene:Bool;
+class KapiBeathovenSong extends KapiSong {
     public function new() {
-        super('beathoven');
-    }
-
-    override function onCreate(event:ScriptEvent):Void {
-        super.onCreate(event);
-
-        hasPlayedCutscene = false;
-    }
-
-    override function onSongRetry(event:ScriptEvent):Void {
-        super.onSongRetry(event);
-        hasPlayedCutscene = true;
-    }
-
-    override function onCountdownStart(event:CountdownScriptEvent):Void {
-        super.onCountdownStart(event);
-        if (!(PlayStatePlaylist.isStoryMode) || PlayState.instance.isChartingMode || hasPlayedCutscene) return;
-
-        hasPlayedCutscene = true;
-        event.cancel();
-        startDialogue();
-    }
-
-    function startDialogue() {
-        PlayState.instance.startConversation('beathoven');
-    }
-
-    override function onDialogueEnd() {
-        Countdown.performCountdown();
+        super('beathoven', null,
+        {
+            start: {
+                dialogue: {
+                    enabled: true
+                }
+            },
+            discord: {
+                enabled: true,
+                albumMod: "Kapi"
+            }
+        });
     }
 }

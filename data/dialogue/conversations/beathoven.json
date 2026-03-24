@@ -8,9 +8,9 @@
     },
 
     "music": {
-        "asset": "",
+        "asset": "dialogue/fuzzball",
         "fadeTime": 0,
-        "looped": false
+        "looped": true
     },
 
     "outro": {
@@ -49,7 +49,7 @@
             "box": "kapiBox",
             "boxAnimation": "idle",
 
-            "text": ["Sure.", "Let's just move on."]
+            "text": ["Sure.", " Let's just move on."]
         },
         {
             "speaker": "kapi",

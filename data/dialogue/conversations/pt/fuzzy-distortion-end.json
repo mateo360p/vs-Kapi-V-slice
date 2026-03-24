@@ -1,0 +1,159 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ja ta ficando muito tarde", ", vamos pra casa Boyfriend."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["M-Mas. ESPERA!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["???"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["E-Eu ganhei!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Do que voce ta falando"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Eu venci ele", ", eu ganhei!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["E-E voce tem que sair comigo!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Uh...", " voce nao ganhou dele."]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["E a gente so tava se divertindo."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Que-"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Voce achou mesmo que eu ia largar meu namorado por um maluco qualquer?"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Beep. *Nao entendeu nada*"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Vamos, Boyfriend."]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "wave",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Tchau!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["MAS , ESPERA VOLTA!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        }
+    ]
+}

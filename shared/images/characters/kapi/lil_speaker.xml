@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="lil_speaker.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="Beat0000" x="0" y="188" width="343" height="191" frameX="-65" frameY="-49" frameWidth="462" frameHeight="257"/>
+	<SubTexture name="Beat0001" x="0" y="0" width="349" height="188" frameX="-62" frameY="-52" frameWidth="462" frameHeight="257"/>
+	<SubTexture name="Beat0002" x="0" y="379" width="346" height="189" frameX="-64" frameY="-51" frameWidth="462" frameHeight="257"/>
+	<SubTexture name="Beat0003" x="349" y="0" width="343" height="191" frameX="-65" frameY="-49" frameWidth="462" frameHeight="257"/>
+	<SubTexture name="Beat0004" x="349" y="0" width="343" height="191" frameX="-65" frameY="-49" frameWidth="462" frameHeight="257"/>
+	<SubTexture name="Beat0005" x="349" y="0" width="343" height="191" frameX="-65" frameY="-49" frameWidth="462" frameHeight="257"/>
+	<SubTexture name="Beat0006" x="349" y="0" width="343" height="191" frameX="-65" frameY="-49" frameWidth="462" frameHeight="257"/>
+	<SubTexture name="Beat0007" x="349" y="0" width="343" height="191" frameX="-65" frameY="-49" frameWidth="462" frameHeight="257"/>
+</TextureAtlas>

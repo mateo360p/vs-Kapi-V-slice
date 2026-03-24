@@ -1,0 +1,159 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Se esta haciendo muy tarde", ", vamos a casa Boyfriend."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["P-Pero. ESPERA!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["???"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Y-Yo gane!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["A que te refieres"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Yo lo venci", ", yo gane!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["T-Tu tienes que salir conmigo!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Uh...", " no le ganaste."]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Y nosotros solo nos estabamos divirtiendo."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Que-"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["De verdad creiste que dejaria a mi novio por un random?"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Beep. *No entiende nada*"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Vamonos Boyfriend."]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "wave",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Chaus!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["PERO , ESPERA VUELVE!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        }
+    ]
+}

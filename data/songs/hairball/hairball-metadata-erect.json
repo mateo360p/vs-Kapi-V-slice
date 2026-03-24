@@ -1,0 +1,22 @@
+{
+	"timeFormat": "ms",
+	"artist": "Dipazio",
+	"charter": "Dipazio",
+	"playData": {
+		"stage": "kapiArcadeSunset",
+		"noteStyle": "kapiW1",
+		"ratings": {
+			"nightmare": 11,
+			"erect": 9
+		},
+		"album": "arcadeShowdownExpansion",
+		"difficulties": ["erect", "nightmare"],
+		"characters": {"girlfriend": "gf", "opponent": "kapi-angry", "player": "kapi_bf", "instrumental": "erect"}
+	},
+	"songName": "Hairball Erect",
+	"timeChanges": [
+		{"t": 0, "bpm": 120}
+	],
+	"generatedBy": "Psych Engine v1.0.3 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}

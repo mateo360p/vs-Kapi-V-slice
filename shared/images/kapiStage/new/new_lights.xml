@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="new_lights.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="idle10000" x="0" y="414" width="946" height="138" frameX="-805" frameY="-317" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="idle20000" x="0" y="138" width="946" height="138" frameX="-805" frameY="-317" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="idle30000" x="0" y="0" width="946" height="138" frameX="-805" frameY="-317" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="idle40000" x="0" y="552" width="946" height="138" frameX="-805" frameY="-317" frameWidth="2560" frameHeight="1400"/>
+	<SubTexture name="idle50000" x="0" y="276" width="946" height="138" frameX="-805" frameY="-317" frameWidth="2560" frameHeight="1400"/>
+</TextureAtlas>

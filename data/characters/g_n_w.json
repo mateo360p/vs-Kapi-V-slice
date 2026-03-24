@@ -2,7 +2,7 @@
   "version": "1.0.0",
   "danceEvery": 1,
   "startingAnimation": "idle",
-  "name": "G&W",
+  "name": "G&W [Arcade Showdown]",
   "renderType": "multisparrow",
   "assetPath": "characters/kapi/G&W",
   "offsets": [

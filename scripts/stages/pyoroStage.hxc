@@ -1,0 +1,68 @@
+package dipazio.stage;
+
+import dipazio.stage.DpzStage;
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.play.character.CharacterType;
+import funkin.graphics.FunkinSprite;
+
+class KapiPyoroCityStage extends DpzStage
+{
+    var yellowThinguie:FunkinSprite;
+    function new() {
+        super('pyoroStage');
+        onRestart.add(restartStage);
+    }
+
+    override function buildStage():Void {
+        super.buildStage();
+        yellowThinguie = new FunkinSprite();
+        yellowThinguie.makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFFffee00);
+        yellowThinguie.screenCenter(0x11);
+        onRestart();
+    }
+
+    override function onCountdownStart(event:CountdownScriptEvent):Void {
+        super.onCountdownStart(event);
+        if (event.eventCanceled) return;
+        PlayState.instance?.iconP2?.visible = false;
+        PlayState.instance?.opponentStrumline?.visible = false;
+        if (PlayState.instance?.camHUD != null) yellowThinguie.cameras = [PlayState.instance.camHUD];
+        PlayState.instance?.add(yellowThinguie);
+    }
+
+    override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+    {
+        super.addCharacter(character, charType);
+        if (charType != CharacterType.BF) {
+            character.kill();
+            character.visible = false;
+        }
+    }
+
+    public function restartStage(event:ScriptEvent):Void // sets all the added props invisible
+    {
+        changeBG();
+        for (i in 1...6) {
+            getNamedProp("st" + i)?.kill();
+            getNamedProp("st" + i)?.visible = false;
+        }
+    }
+
+    public function addCityProp(num:Int):Void { // add a prop with a num int
+        getNamedProp("st" + num)?.revive();
+        getNamedProp("st" + num)?.visible = true;
+
+        if (yellowThinguie == null) return;
+        DpzPlayStateModule.cancelTweensOf(yellowThinguie, ["alpha"]);
+        yellowThinguie?.alpha = 0.232;
+        DpzPlayStateModule.tween(yellowThinguie, {alpha: 0}, 0.6);
+    }
+
+    public function changeBG(num:Int = null):Void {
+        var newName:String = "BG";
+        if (num != null && 0 < num && num < 5) newName = "bg" + num;
+        getNamedProp("BG")?.loadTexture("kapiStage/pyoro/" + newName);
+        yellowThinguie?.alpha = 0;
+    }
+}

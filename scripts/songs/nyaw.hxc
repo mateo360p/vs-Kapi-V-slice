@@ -1,50 +1,35 @@
+package dipazio.song;
+
 import funkin.play.PlayState;
 import funkin.play.PlayStatePlaylist;
-import funkin.play.song.Song;
+import dipazio.song.KapiSong;
 import flixel.FlxG;
 
 import Date;
 
-class KapiNyawSong extends Song {
-    var hasPlayedCutscene:Bool;
+class KapiNyawSong extends KapiSong {
     public function new() {
-        super('nyaw');
+        super('nyaw', null,
+        {
+            start: {
+                dialogue: {
+                    enabled: true
+                }
+            },
+            discord: {
+                enabled: true,
+                albumMod: "Kapi"
+            }
+        });
+        onRestart.add(nyawRestart);
     }
 
-    override function onCreate(event:ScriptEvent):Void {
-        super.onCreate(event);
-
-        hasPlayedCutscene = false;
+    public function nyawRestart(event:ScriptEvent):Void {
         PlayState.instance.camGame?.visible = true;
-    }
-
-    override function onSongRetry(event:ScriptEvent):Void {
-        super.onSongRetry(event);
-        hasPlayedCutscene = true;
-        PlayState.instance.camGame?.visible = true;
-    }
-
-    override function onCountdownStart(event:CountdownScriptEvent):Void {
-        super.onCountdownStart(event);
-        if (!(PlayStatePlaylist.isStoryMode) || PlayState.instance.isChartingMode || hasPlayedCutscene) return;
-
-        hasPlayedCutscene = true;
-        event.cancel();
-        startDialogue();
     }
 
     override function onStepHit(event:SongTimeScriptEvent):Void {
         super.onStepHit(event);
-
-        if (event.beat < 427) return;
-        if (event.step == 1748) PlayState.instance.camGame?.visible = false;
-    }
-
-    function startDialogue() {
-        PlayState.instance.startConversation('nyaw');
-    }
-
-    override function onDialogueEnd() {
-        Countdown.performCountdown();
+        if (event.step == 1748) PlayState.instance?.camGame?.visible = false;
     }
 }

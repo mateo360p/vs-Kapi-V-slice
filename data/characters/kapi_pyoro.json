@@ -1,0 +1,187 @@
+{
+  "version": "1.0.0",
+  "danceEvery": 1,
+  "startingAnimation": "idle",
+  "name": "Pyoro [Arcade Showdown]",
+  "renderType": "multisparrow",
+  "assetPath": "characters/kapi/pyoro",
+  "offsets": [
+    0,
+    0
+  ],
+  "cameraOffsets": [
+    0,
+    0
+  ],
+  "scale": 5,
+  "singTime": 5,
+  "isPixel": true,
+  "flipX": true,
+  "healthIcon": {
+    "id": "kapi_pyoro",
+    "isPixel": false,
+    "flipX": false,
+    "scale": 1,
+    "offsets": [
+      0,
+      0
+    ]
+  },
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "flipX": false,
+      "flipY": false
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "left miss",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "flipX": false,
+      "flipY": false
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "right miss",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "flipX": false,
+      "flipY": false
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "down miss",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "flipX": false,
+      "flipY": false
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "up miss",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "flipX": false,
+      "flipY": false
+    },
+    {
+      "name": "singUP",
+      "prefix": "up0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [0, 1, 2, 3]
+    },
+    {
+      "name": "singUP-end",
+      "prefix": "up0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [0, 1, 2, 3]
+    },
+    {
+      "name": "singDOWN-end",
+      "prefix": "down0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "left0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [0, 1, 2, 3]
+    },
+    {
+      "name": "singRIGHT-end",
+      "prefix": "left0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "right0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [0, 1, 2, 3]
+    },
+    {
+      "name": "singLEFT-end",
+      "prefix": "right0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "name": "singUP-mobile",
+      "prefix": "upMobile0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [0, 1, 2, 3]
+    },
+    {
+      "name": "singUP-mobile-end",
+      "prefix": "up0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "name": "singRIGHT-mobile",
+      "prefix": "leftMobile0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [0, 1, 2, 3]
+    },
+    {
+      "name": "singRIGHT-mobile-end",
+      "prefix": "left0",
+      "offsets": [0, 0],
+      "frameRate": 20,
+      "frameIndices": [4, 5, 6, 7]
+    },
+    {
+      "renderType": "animateatlas",
+      "assetPath": "shared:characters/bf-death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "offsets": [22, 15]
+    },
+    {
+      "renderType": "animateatlas",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "offsets": [22, 15]
+    },
+    {
+      "renderType": "animateatlas",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "offsets": [22, 15]
+    },
+    {
+      "name": "lilDance",
+      "prefix": "dance",
+      "offsets": [
+        11,
+        20
+      ],
+      "frameRate": 20,
+      "flipX": false,
+      "flipY": false
+    }
+  ]
+}

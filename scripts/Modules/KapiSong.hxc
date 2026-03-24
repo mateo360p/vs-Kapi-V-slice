@@ -1,0 +1,118 @@
+package dipazio.song;
+
+import funkin.play.PlayState;
+import funkin.play.PlayStatePlaylist;
+import dipazio.song.DpzSong;
+import flixel.FlxG;
+import funkin.audio.FunkinSound;
+import flixel.util.FlxTimer;
+import funkin.graphics.FunkinSprite;
+import funkin.play.CountdownStep;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxTimer;
+import funkin.Conductor;
+
+class KapiSong extends DpzSong {
+    var playedFkinStupidSound:Bool = false;
+    var stupidTrafficSprite:FunkinSprite;
+    public function new(songID:String, ?params:Dynamic = {}, ?configuration:Dynamic = null) {
+        super(songID, params, configuration);
+        onRestart.add(kapiRestart);
+    }
+
+    override function onCreate(event:ScriptEvent):Void {
+        stupidTrafficSprite = new FunkinSprite().loadSparrow("noteStyles/kapi/kapicountdown");
+        var fps:Int = 20;
+        stupidTrafficSprite.animation.addByPrefix('start', 'start', fps, false);
+        stupidTrafficSprite.animation.addByIndices('start-hold', 'start', [2], null, fps, false);
+        stupidTrafficSprite.animation.addByPrefix('three', 'step1', fps, false);
+        stupidTrafficSprite.animation.addByPrefix('two', 'step2', fps, false);
+        stupidTrafficSprite.animation.addByPrefix('one', 'step3', fps, false);
+        stupidTrafficSprite.animation.addByPrefix('go', 'go', fps, false);
+        stupidTrafficSprite.screenCenter();
+        stupidTrafficSprite.cameras = [PlayState.instance.camHUD];
+        stupidTrafficSprite.scrollFactor.set(0, 0);
+        PlayState.instance?.add(stupidTrafficSprite);
+        super.onCreate(event);
+        stupidTrafficSprite?.alpha = 0;
+    }
+
+    override function onCountdownStart(event:CountdownScriptEvent):Void {
+        super.onCountdownStart(event);
+        if (event.eventCanceled || playedFkinStupidSound) return;
+
+        event.cancel();
+        stupidTrafficSprite?.alpha = 1;
+        playedFkinStupidSound = true;
+        DpzPlayStateModule.timer(0.35, function(t) {
+            PlayState.instance?.startCountdown();
+        });
+        FunkinSound.playOnce(Paths.sound("gameplay/countdown/kapi/startSong"), 0.8);
+    }
+
+    override public function onCountdownStep(event:CountdownScriptEvent):Void {
+        super.onCountdownStep(event);
+        var anim:String = "";
+        switch(event.step) {
+            case CountdownStep.THREE: anim = "three";
+            case CountdownStep.TWO: anim = "two";
+            case CountdownStep.ONE: anim = "one";
+            default: anim = "go";
+        }
+        //stupidTrafficSprite?.alpha = 1;
+        stupidTrafficSprite?.animation?.play(anim, true);
+    }
+
+    override public function onCountdownEnd(event:CountdownScriptEvent):Void
+    {
+        super.onCountdownEnd(event);
+        DpzPlayStateModule.tween(stupidTrafficSprite, {alpha: 0}, Conductor.instance.beatLengthMs / 1000, {
+            ease: FlxEase.cubeInOut,
+            onComplete: function(twn) {
+                DpzPlayStateModule.cancelTweensOf(stupidTrafficSprite);
+                stupidTrafficSprite?.kill();
+            }
+        });
+    }
+
+    public function kapiRestart(event:ScriptEvent):Void {
+        playedFkinStupidSound = false;
+        DpzPlayStateModule.cancelTweensOf(stupidTrafficSprite);
+        stupidTrafficSprite?.revive();
+        stupidTrafficSprite.animation.play("start", false);
+        stupidTrafficSprite?.alpha = 1;
+        stupidTrafficSprite?.screenCenter();
+        stupidTrafficSprite?.x += 120;
+        stupidTrafficSprite?.y -= 50;
+    }
+
+    override function onDestroy(event):Void {
+        super.onDestroy(event);
+        stupidTrafficSprite.destroy();
+    }
+
+    ////--- Fukin void functions so the game doesn't freak out
+    override public function onPause(event:PauseScriptEvent):Void {super.onPause(event);}
+    override public function onResume(event:ScriptEvent):Void {super.onResume(event);}
+    override public function onSongLoaded(event:SongLoadScriptEvent):Void {super.onSongLoaded(event);}
+    override public function onSongStart(event:ScriptEvent):Void {super.onSongStart(event);}
+    override public function onSongEnd(event:ScriptEvent):Void {super.onSongEnd(event);}
+    override public function onGameOver(event:ScriptEvent):Void {super.onGameOver(event);}
+    override public function onSongRetry(event:SongRetryEvent):Void {super.onSongRetry(event);}
+    override public function onNoteIncoming(event:NoteScriptEvent):Void {super.onNoteIncoming(event);}
+    override public function onNoteHit(event:HitNoteScriptEvent):Void {super.onNoteHit(event);}
+    override public function onNoteMiss(event:NoteScriptEvent):Void {super.onNoteMiss(event);}
+    override public function onNoteHoldDrop(event:HoldNoteScriptEvent):Void {super.onNoteHoldDrop(event);}
+    override public function onNoteGhostMiss(event:GhostMissNoteScriptEvent):Void {super.onNoteGhostMiss(event);}
+    override public function onSongEvent(event:SongEventScriptEvent):Void {super.onSongEvent(event);}
+    override public function onStepHit(event:SongTimeScriptEvent):Void {super.onStepHit(event);}
+    override public function onBeatHit(event:SongTimeScriptEvent):Void {super.onBeatHit(event);}
+    //override public function onCountdownStart(event:CountdownScriptEvent):Void {super.onCountdownStart(event);}
+    //override public function onCountdownStep(event:CountdownScriptEvent):Void {super.onCountdownStep(event);}
+    //override public function onCountdownEnd(event:CountdownScriptEvent):Void {super.onCountdownEnd(event);}
+    //override public function onScriptEvent(event:ScriptEvent):Void {super.onScriptEvent(event);}
+    //override public function onCreate(event:ScriptEvent):Void {super.onCreate(event);}
+    //override public function onDestroy(event:ScriptEvent):Void {super.onDestroy(event);}
+    override public function onUpdate(event:UpdateScriptEvent):Void {super.onUpdate(event);}
+}

@@ -1,10 +1,14 @@
 {
   "version": "1.0.0",
-  "name": "Boyfriend (Arcade Showdown)",
-  "renderType": "multisparrow",
-  "assetPath": "characters/BOYFRIEND",
+  "name": "Boyfriend [Arcade Showdown]",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/bf",
   "flipX": true,
-  "singTime": 8.0,
+  "offsets": [17, 14],
+  "cameraOffsets": [-18, 36],
+  "death": {
+    "cameraOffsets": [200, -200]
+  },
   "healthIcon": {
     "id": "bf",
     "isPixel": false,
@@ -18,118 +22,78 @@
   "animations": [
     {
       "name": "idle",
-      "prefix": "BF idle dance",
-      "offsets": [-5, 0]
+      "prefix": "Idle"
     },
     {
       "name": "singLEFT",
-      "prefix": "BF NOTE LEFT0",
-      "offsets": [12, -6]
+      "prefix": "Left"
     },
     {
       "name": "singDOWN",
-      "prefix": "BF NOTE DOWN0",
-      "offsets": [-10, -50]
+      "prefix": "Down"
     },
     {
       "name": "singUP",
-      "prefix": "BF NOTE UP0",
-      "offsets": [-29, 27]
+      "prefix": "Up"
     },
     {
       "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT0",
-      "offsets": [-38, -7]
+      "prefix": "Right"
     },
     {
       "name": "singLEFTmiss",
-      "prefix": "BF NOTE LEFT MISS",
-      "offsets": [12, 24]
+      "prefix": "Left Miss"
     },
     {
       "name": "singDOWNmiss",
-      "prefix": "BF NOTE DOWN MISS",
-      "offsets": [-11, -19]
+      "prefix": "Down Miss"
     },
     {
       "name": "singUPmiss",
-      "prefix": "BF NOTE UP MISS",
-      "offsets": [-29, 27]
+      "prefix": "Up Miss"
     },
     {
       "name": "singRIGHTmiss",
-      "prefix": "BF NOTE RIGHT MISS",
-      "offsets": [-30, 21]
-    },
-    {
-      "name": "preAttack",
-      "prefix": "bf pre attack",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "attack",
-      "prefix": "boyfriend attack",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "dodge",
-      "prefix": "boyfriend dodge",
-      "offsets": [0, 0]
-    },
-    {
-      "name": "dodge-hold",
-      "prefix": "boyfriend dodge",
-      "frameIndices": [10, 11, 12],
-      "looped": true,
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [0, 0]
+      "prefix": "Right Miss"
     },
     {
       "name": "hey",
-      "prefix": "BF HEY!!",
-      "offsets": [-4, 5]
+      "prefix": "Hey"
     },
     {
-      "name": "hit",
-      "prefix": "BF hit",
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [14, 18]
-    },
-    {
-      "name": "hit-hold",
-      "prefix": "BF hit",
-      "frameIndices": [10, 11],
-      "looped": true,
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [14, 18]
-    },
-    {
-      "name": "firstDeath",
-      "prefix": "BF kapi dies",
-      "offsets": [109, 492]
-    },
-    {
-      "name": "deathLoop",
-      "prefix": "BF kapi Dead Loop",
-      "looped": true,
-      "offsets": [109, 486]
-    },
-    {
-      "name": "deathConfirm",
-      "prefix": "BF kapi Dead confirm",
-      "offsets": [109, 549]
+      "name": "cheer",
+      "prefix": "Cheer"
     },
     {
       "name": "scared",
-      "prefix": "BF idle shaking",
-      "offsets": [-4, 0]
+      "prefix": "Scared"
     },
     {
+      "assetPath": "characters/kapi/Boyfriend_kapi",
+      "renderType": "sparrow",
+      "name": "firstDeath",
+      "prefix": "BF kapi dies",
+      "offsets": [89, 419]
+    },
+    {
+      "renderType": "sparrow",
+      "name": "deathLoop",
+      "prefix": "BF kapi Dead Loop",
+      "looped": true,
+      "offsets": [89, 419]
+    },
+    {
+      "renderType": "sparrow",
+      "name": "deathConfirm",
+      "prefix": "BF kapi Dead confirm",
+      "offsets": [89, 419]
+    },
+    {
+      "renderType": "sparrow",
 			"name": "Kapi Meow!",
 			"prefix": "BF kapi HEY!!",
-			"offsets": [11, 15],
-			"frameRate": 24,
-			"assetPath": "characters/kapi/Boyfriend_kapi"
+			"offsets": [2, -57],
+			"frameRate": 24
 		}
   ]
 }

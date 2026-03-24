@@ -1,0 +1,23 @@
+{
+	"timeFormat": "ms",
+	"artist": "PaperKitty",
+	"charter": "Dipazio",
+	"playData": {
+		"stage": "kapiNewArcade",
+		"noteStyle": "kapiW2",
+		"ratings": {
+			"easy": 4,
+			"hard": 7,
+			"normal": 6
+		},
+		"album": "arcadeShowdown2",
+		"difficulties": ["easy", "normal", "hard"],
+		"characters": {"girlfriend": "kapi_speaker", "opponent": "kapi-new", "player": "bf"}
+	},
+	"songName": "Meowgen",
+	"timeChanges": [
+		{"t": 0, "bpm": 200}
+	],
+	"generatedBy": "Psych Engine v1.0.3 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}

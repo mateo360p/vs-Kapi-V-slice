@@ -1,0 +1,103 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Mi dance-pad medio que se dano.)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Tal vez me deberia calmar un poco...)"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "laugh",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Esto es divertido!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Hay mucha mas gente...)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Y el arcade ya cierra pronto...)"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Que te parece una cancion mas, Kapi?"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Uh", ", dale!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Con suerte esta vez la impresiono.)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Terminemos esto"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Sin contenernos."]
+        }
+    ]
+}

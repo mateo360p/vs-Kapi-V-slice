@@ -1,0 +1,30 @@
+package funkin.play.character;
+
+import flixel.FlxG;
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.PlayState;
+import funkin.util.Constants;
+import flixel.math.FlxPoint;
+import funkin.play.character.MultiSparrowCharacter;
+
+class VsKapiPyoroCharacter extends MultiSparrowCharacter
+{
+  public function new()
+  {
+    super("kapi_pyoro");
+    ignoreExclusionPref = ["lilDance"];
+  }
+
+  /*override function buildAnimations():Void
+  {
+    super.buildAnimations();
+    trace("LIST: " + this.animation.getNameList());
+  }*/
+
+  override public function playSingAnimation(dir:NoteDirection, miss:Bool = false, ?suffix:String = ''):Void
+  {
+    if (FlxG.onMobile && !miss && dir >= 2) suffix = "mobile" + suffix; // fixing the notes? nuh uh let's fix the animations bru!
+
+    return super.playSingAnimation(dir, miss, suffix);
+  }
+}

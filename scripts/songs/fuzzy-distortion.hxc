@@ -1,3 +1,5 @@
+package dipazio.song;
+
 import flixel.FlxG;
 import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxEase;
@@ -6,42 +8,26 @@ import flixel.util.FlxTimer;
 import funkin.audio.FunkinSound;
 import funkin.play.PlayState;
 import funkin.play.PlayStatePlaylist;
-import funkin.play.song.Song;
+import dipazio.song.KapiSong;
 import funkin.play.stage.Bopper;
 import flixel.util.FlxColor;
 
 import Date;
 
-class KapiFuzzyDistortionSong extends Song {
-    var hasPlayedEndCutscene:Bool;
-
+class KapiFuzzyDistortionSong extends KapiSong {
     public function new() {
-        super('fuzzy-distortion');
-    }
-
-    function onCreate(event:ScriptEvent):Void {
-        super.onCreate(event);
-        hasPlayedEndCutscene = false;
-    }
-
-    override function onSongRetry(event:ScriptEvent) {
-        super.onSongRetry(event);
-        hasPlayedEndCutscene = false;
-    }
-
-    function startEndDialogue() {
-        PlayState.instance.startConversation('fuzzy-distortion-end');
-    }
-
-    override function onSongEnd(event:CountdownScriptEvent):Void {
-        if (!hasPlayedEndCutscene) {
-            hasPlayedEndCutscene = true;
-            PlayState.instance.disableKeys = false;
-            startEndDialogue();
-            event.cancel();
-        } else {
-            PlayState.instance.disableKeys = true;
-            super.onSongEnd(event);
-        }
+        super('fuzzy-distortion', null,
+        {
+            end: {
+                dialogue: {
+                    enabled: true,
+                    freeplay: true
+                }
+            },
+            discord: {
+                enabled: true,
+                albumMod: "Kapi"
+            }
+        });
     }
 }

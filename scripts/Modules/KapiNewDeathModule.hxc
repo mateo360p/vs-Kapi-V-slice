@@ -1,0 +1,106 @@
+import flixel.FlxG;
+import funkin.play.PlayState;
+import funkin.Conductor;
+import funkin.modding.module.Module;
+import funkin.play.GameOverSubState;
+import flixel.FlxCamera;
+import funkin.graphics.FunkinSprite;
+import funkin.util.assets.FlxAnimationUtil;
+
+using StringTools;
+
+class KapiNewDeathModule extends Module {
+	var camDed:FlxCamera;
+    var dedSprite:FunkinSprite;
+	final songArray:Array<String> = ["meowgen", "scratch-post", "pyoro"]; // THIS FOR 3 SONGS MAN-
+
+	function validate():Bool {
+		return songArray.contains(DpzPlayStateModule.curSongID());
+	}
+
+	public function new() {
+		super('KapiNewDeathModule', 100, {state:PlayState});
+	}
+
+    override function onSongRetry(event):Void {
+        super.onSongRetry(event);
+		if (!validate()) return;
+        camDed?.alpha = 0;
+        camDed?.kill();
+		PlayState.instance?.currentStage?.getBoyfriend()?.visible = true;
+    }
+
+	override public function onDestroy(event):Void {
+		camDed?.destroy();
+        camDed = null;
+        dedSprite?.destroy();
+        dedSprite = null;
+        super.onDestroy(event);
+    }
+
+    function initAssets():Void {
+        camDed = new FlxCamera(); camDed.bgColor = 0x00000000;
+        camDed.alpha = 0;
+        camDed.kill();
+		if (!FlxG.cameras?.contains(camDed)) FlxG.cameras.add(camDed, false);
+
+        dedSprite = new FunkinSprite().loadTextureAtlas('kapiStage/deathNew', "shared");
+        FlxAnimationUtil.addTextureAtlasAnimations(dedSprite, [ // probably the last time I use a non-character atlas sprite fr
+            {
+                name: "firstDeath",
+                prefix: "breakHeart",
+                frameRate: 48
+            },
+            {
+                name: "deathLoop",
+                prefix: "machineLoop",
+                looped: true,
+                frameRate: 48
+            },
+            {
+                name: "deathConfirm",
+                prefix: "machineFinal",
+                frameRate: 48
+            }]
+        );
+        dedSprite.cameras = [camDed];
+        dedSprite.screenCenter();
+    }
+
+    override function onSubStateOpenEnd(event:SubStateScriptEvent):Void {
+		super.onSubStateOpenEnd(event);
+		if (!validate()) return;
+		if (!(Std.isOfType(event.targetState, GameOverSubState))) return;
+		initAssets();
+		initKapiGameOver();
+	}
+
+    public function initKapiGameOver():Void {
+        var state:GameOverSubState = GameOverSubState.instance;
+        if (state == null) return;
+
+        GameOverSubState.musicSuffix = '-newKapi';
+        GameOverSubState.blueBallSuffix = '-newKapi';
+        GameOverSubState.animationSuffix = '';
+
+        state.boyfriend?.visible = false;
+        state.boyfriend.animation.onFrameChange.add(onDying);
+        camDed?.revive();
+        camDed?.alpha = 1;
+
+        GameOverSubState.instance.add(dedSprite);
+    }
+
+    function onDying(name:String = "", frameNumber:Int = -1, frameIndex:Int = -1) {
+        if (frameNumber > 0) return; // just at the start
+        switch (name) {
+            case "firstDeath":
+                dedSprite?.animation?.play("firstDeath", true);
+            case "deathLoop":
+                dedSprite?.animation?.play("deathLoop", false);
+            case "deathConfirm":
+                dedSprite?.animation?.play("deathConfirm", true);
+                GameOverSubState.instance?.boyfriend?.animation?.onFrameChange?.remove(onDying);
+        }
+    }
+}

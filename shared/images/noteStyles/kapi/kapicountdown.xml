@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="kapicountdown.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="start0000" x="2485" y="0" width="339" height="789" frameX="-925" frameY="-317" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="start0001" x="0" y="747" width="426" height="740" frameX="-880" frameY="-315" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="start0002" x="416" y="1487" width="416" height="734" frameX="-890" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="step10000" x="1653" y="0" width="416" height="755" frameX="-890" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="step10001" x="2069" y="0" width="416" height="734" frameX="-890" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="step20000" x="426" y="747" width="416" height="739" frameX="-890" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="step20001" x="0" y="1487" width="416" height="734" frameX="-890" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="step30000" x="842" y="747" width="416" height="739" frameX="-890" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="step30001" x="2069" y="734" width="416" height="734" frameX="-890" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="go0000" x="0" y="0" width="1007" height="747" frameX="-612" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+	<SubTexture name="go0001" x="1007" y="0" width="646" height="734" frameX="-787" frameY="-314" frameWidth="2350" frameHeight="1450"/>
+</TextureAtlas>

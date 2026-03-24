@@ -1,11 +1,11 @@
 {
   "version": "1.1.0",
   "name": "vs. Kapi - Week 1",
-  "author": "Unknown",
+  "author": "Dipazio",
   "fallback": null,
   "assets": {
     "note": {
-      "assetPath": "noteStyles/kapi/week1/notes",
+      "assetPath": "shared:noteStyles/kapi/week1/notes",
       "scale": 0.7,
       "data": {
         "left": { "prefix": "noteLeft" },
@@ -15,7 +15,7 @@
       }
     },
     "noteStrumline": {
-      "assetPath": "noteStyles/kapi/week1/noteStrumline",
+      "assetPath": "shared:noteStyles/kapi/week1/noteStrumline",
       "scale": 0.7,
       "offsets": [0, 0],
       "data": {
@@ -38,12 +38,12 @@
       }
     },
     "holdNote": {
-      "assetPath": "noteStyles/kapi/week1/NOTE_hold_assets",
+      "assetPath": "shared:noteStyles/kapi/week1/NOTE_hold_assets",
       "scale": 0.7,
       "data": {}
     },
     "noteSplash": {
-      "assetPath": "noteStyles/kapi/week1/noteSplashes",
+      "assetPath": "shared:noteStyles/kapi/week1/noteSplashes",
       "alpha": 0.8,
       "offsets": [25, -5],
       "data": {
@@ -72,25 +72,25 @@
       "data": {
         "enabled": true,
         "left": {
-          "assetPath": "noteStyles/kapi/week1/holdCoverPurpleRed",
+          "assetPath": "shared:noteStyles/kapi/week1/holdCoverPurpleRed",
           "start": { "prefix": "holdCoverStartPurpleRed" },
           "hold": { "prefix": "holdCoverPurpleRed" },
           "end": { "prefix": "holdCoverEndPurpleRed" }
         },
         "right": {
-          "assetPath": "noteStyles/kapi/week1/holdCoverPurpleRed",
+          "assetPath": "shared:noteStyles/kapi/week1/holdCoverPurpleRed",
           "start": { "prefix": "holdCoverStartPurpleRed" },
           "hold": { "prefix": "holdCoverPurpleRed" },
           "end": { "prefix": "holdCoverEndPurpleRed" }
         },
         "up": {
-          "assetPath": "noteStyles/kapi/week1/holdCoverBlueGreen",
+          "assetPath": "shared:noteStyles/kapi/week1/holdCoverBlueGreen",
           "start": { "prefix": "holdCoverStartBlueGreen" },
           "hold": { "prefix": "holdCoverBlueGreen" },
           "end": { "prefix": "holdCoverEndBlueGreen" }
         },
         "down": {
-          "assetPath": "noteStyles/kapi/week1/holdCoverBlueGreen",
+          "assetPath": "shared:noteStyles/kapi/week1/holdCoverBlueGreen",
           "start": { "prefix": "holdCoverStartBlueGreen" },
           "hold": { "prefix": "holdCoverBlueGreen" },
           "end": { "prefix": "holdCoverEndBlueGreen" }
@@ -99,32 +99,32 @@
     },
     "countdownThree": {
       "data": {
-        "audioPath": "gameplay/countdown/funkin/introTHREE"
+        "audioPath": "gameplay/countdown/kapi/introTick"
       },
       "assetPath": null
     },
     "countdownTwo": {
       "data": {
-        "audioPath": "gameplay/countdown/funkin/introTWO"
+        "audioPath": "gameplay/countdown/kapi/introTick"
       },
       "assetPath": "ui/countdown/funkin/ready",
-      "scale": 1.0,
+      "scale": 0.001,
       "isPixel": false
     },
     "countdownOne": {
       "data": {
-        "audioPath": "gameplay/countdown/funkin/introONE"
+        "audioPath": "gameplay/countdown/kapi/introTick"
       },
       "assetPath": "ui/countdown/funkin/set",
-      "scale": 1.0,
+      "scale": 0.001,
       "isPixel": false
     },
     "countdownGo": {
       "data": {
-        "audioPath": "gameplay/countdown/funkin/introGO"
+        "audioPath": "gameplay/countdown/kapi/introGO"
       },
       "assetPath": "ui/countdown/funkin/go",
-      "scale": 1.0,
+      "scale": 0.001,
       "isPixel": false
     },
     "judgementSick": {

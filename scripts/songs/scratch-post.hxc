@@ -1,0 +1,23 @@
+package dipazio.song;
+
+import FlxG;
+import funkin.play.PlayState;
+import dipazio.song.KapiSong;
+
+class KapiScratchPostSong extends KapiSong {
+    public function new() {
+        super('scratch-post', null,
+        {
+            discord: {
+                enabled: true,
+                albumMod: "Kapi"
+            }
+        });
+    }
+
+    override function onBeatHit(event:SongTimeScriptEvent):Void {
+        super.onBeatHit(event);
+        if (event.beat == 144) PlayState.instance?.currentStage?.scriptCall("altBG", [true]);
+        else if (event.beat == 360) PlayState.instance?.currentStage?.scriptCall("altBG", [false]);
+    }
+}

@@ -1,15 +1,20 @@
 {
-  "title": "vs. Kapi - V-Slice Port [1.0.1]",
-  "description": "",
+  "title": "vs. Kapi - V-Slice Port [2.0.0]",
+  "description": "An accurate port of the Kapi Mod created by PaperKitty for V-Slice/ Base Game!",
   "author": "Dipazio",
   "contributors": [
     {
       "name": "Dipazio",
-      "role": "Mod porter, coder, etc",
+      "role": "Mod porter, coder, composer, etc",
       "url": "https://github.com/mateo360p"
+    },
+    {
+      "name": "LittleJester",
+      "role": "Fuzzball composer [Dialogue Song]",
+      "url": "https://gamebanana.com/members/4880668"
     }
   ],
   "api_version": "0.8.3",
-  "mod_version": "1.0.1",
+  "mod_version": "2.0.0",
   "license": "Apache-2.0"
 }

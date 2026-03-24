@@ -1,0 +1,23 @@
+{
+	"timeFormat": "ms",
+	"artist": "emihead",
+	"charter": "Dipazio",
+	"playData": {
+		"stage": "pyoroStage",
+		"noteStyle": "kapiPyoro",
+		"ratings": {
+			"easy": 4,
+			"hard": 6,
+			"normal": 5
+		},
+		"album": "arcadeShowdown2",
+		"difficulties": ["easy", "normal", "hard"],
+		"characters": {"girlfriend": "kapi_emptyPyoro", "opponent": "kapi_emptyPyoro", "player": "kapi_pyoro"}
+	},
+	"songName": "Pyoro",
+	"timeChanges": [
+		{"t": 0, "bpm": 220}
+	],
+	"generatedBy": "Psych Engine v1.0.3 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}

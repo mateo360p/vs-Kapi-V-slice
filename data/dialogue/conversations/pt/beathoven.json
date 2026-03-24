@@ -1,0 +1,71 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "dialogue/fuzzball",
+        "fadeTime": 0,
+        "looped": true
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Nada mal pra um gato!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Viu o que eu te falei, BF?"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "what",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Isso literalmente nao significa nada-"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "idle",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Claro.", " Melhor a gente continuar."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Nem espera que eu pegue leve..."]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["beep di bop *xingando ate a alma dele*"]
+        }
+    ]
+}

@@ -1,0 +1,30 @@
+package dipazio.stage;
+
+import dipazio.stage.KapiArcadeClosedStage;
+import flixel.FlxG;
+import funkin.play.stage.Stage;
+import flixel.util.FlxColor;
+
+class kapiNewArcadeStage extends KapiArcadeClosedStage
+{
+    function new() {
+        super('kapiNewArcade');
+        onRestart.add(function(event) {
+            altBG(false);
+        });
+        lightsCount = 5;
+    }
+
+    public function altBG(value:Bool = true):Void {
+        (value ? getNamedProp('BG-dark')?.revive() : getNamedProp('BG-dark')?.kill());
+        (!value ? getNamedProp('BG')?.revive() : getNamedProp('BG')?.kill());
+        getNamedProp('BG-dark')?.visible = value;
+        getNamedProp('BG')?.visible = !value;
+
+        var daCol:FlxColor = value ? 0xFF876a73 : FlxColor.WHITE;// #876a73
+        getBoyfriend()?.color = daCol;
+        getDad()?.color = daCol;
+        getGirlfriend()?.color = daCol;
+        getNamedProp('front')?.color = daCol;
+    }
+}

@@ -1,9 +1,10 @@
 {
   "version": "1.0.0",
-  "name": "ARCADE SHOWDOWN OST ALBUM",
+  "name": "ARCADE SHOWDOWN ANIVERSARY OST ALBUM",
   "artists": [
     "PaperKitty"
   ],
   "albumArtAsset": "freeplay/albumRoll/arcadeShowdown2_album",
-  "albumTitleAsset": "freeplay/albumRoll/arcadeShowdown2-text"
+  "albumTitleAsset": "freeplay/albumRoll/arcadeShowdown2-text",
+  "albumTitleOffsets": [-26, -20]
 }

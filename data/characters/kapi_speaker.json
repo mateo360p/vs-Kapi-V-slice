@@ -1,0 +1,44 @@
+{
+  "version": "1.0.0",
+  "danceEvery": 1,
+  "startingAnimation": "idle",
+  "name": "Speaker [Arcade Showdown]",
+  "renderType": "multisparrow",
+  "assetPath": "characters/kapi/lil_speaker",
+  "offsets": [
+    -60,
+    0
+  ],
+  "cameraOffsets": [
+    0,
+    -180
+  ],
+  "scale": 0.9,
+  "singTime": 4,
+  "isPixel": false,
+  "flipX": false,
+  "animations": [
+    {
+      "name": "danceLeft",
+      "prefix": "Beat",
+      "offsets": [
+        0,
+        0
+      ],
+      "frameRate": 12,
+      "flipX": false,
+      "flipY": false
+    },
+    {
+      "name": "danceRight",
+      "prefix": "Beat",
+      "offsets": [
+        0,
+        0
+      ],
+      "frameRate": 12,
+      "flipX": false,
+      "flipY": false
+    }
+  ]
+}

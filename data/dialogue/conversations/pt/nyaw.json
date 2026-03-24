@@ -1,0 +1,103 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Meu dance-pad meio que deu ruim.)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Talvez eu devia pegar mais leve...)"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "laugh",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Isso ta divertido!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Tem muito mais gente...)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(E o arcade ja vai fechar...)"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Que acha de mais uma musica, Kapi?"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Uh", ", bora!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "confused",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["(Com sorte dessa vez eu impressiono ela.)"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Vamos acabar com isso"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "cute",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Sem segurar nada."]
+        }
+    ]
+}

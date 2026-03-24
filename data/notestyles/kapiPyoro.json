@@ -1,0 +1,213 @@
+{
+  "version": "1.1.0",
+  "name": "Pyoro's Notes [vs. Kapi]",
+  "author": "Unknown",
+  "fallback": "funkin",
+  "assets": {
+    "note": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/pyoro-arrows",
+      "scale": 6.0,
+      "isPixel": true,
+      "animated": true,
+      "data": {
+        "left": { "prefix": "noteLeft", "looped": true, "frameRate": 10 },
+        "down": { "prefix": "noteDown", "looped": true, "frameRate": 10 },
+        "up": { "prefix": "noteUp", "looped": true, "frameRate": 10 },
+        "right": { "prefix": "noteRight", "looped": true, "frameRate": 10 }
+      }
+    },
+    "noteStrumline": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/pyoro-arrows",
+      "scale": 6.0,
+      "offsets": [28, 32],
+      "isPixel": true,
+      "data": {
+        "leftStatic": { "prefix": "staticLeft0" },
+        "leftPress": { "prefix": "pressedLeft0" },
+        "leftConfirm": { "prefix": "confirmLeft0" },
+        "leftConfirmHold": { "prefix": "confirmLeft0" },
+        "downStatic": { "prefix": "staticDown0" },
+        "downPress": { "prefix": "pressedDown0" },
+        "downConfirm": { "prefix": "confirmDown0" },
+        "downConfirmHold": { "prefix": "confirmDown0" },
+        "upStatic": { "prefix": "staticUp0" },
+        "upPress": { "prefix": "pressedUp0" },
+        "upConfirm": { "prefix": "confirmUp0" },
+        "upConfirmHold": { "prefix": "confirmUp0" },
+        "rightStatic": { "prefix": "staticRight0" },
+        "rightPress": { "prefix": "pressedRight0" },
+        "rightConfirm": { "prefix": "confirmRight0" },
+        "rightConfirmHold": { "prefix": "confirmRight0" }
+      }
+    },
+    "holdNote": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/pyoroArrowEnds",
+      "scale": 6.0,
+      "offsets": [2, 1],
+      "isPixel": true,
+      "data": {}
+    },
+    "noteSplash": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/pyoroNoteSplash",
+      "scale": 4.0,
+      "alpha": 1.0,
+      "isPixel": true,
+      "offsets": [27.5, 18.5],
+      "data": {
+        "blendMode": "screen",
+        "framerateDefault": 33,
+        "framerateVariance": 2,
+        "enabled": true,
+        "leftSplashes": [
+          { "prefix": "purple1" },
+          { "prefix": "purple2" },
+          { "prefix": "purple3" }
+        ],
+        "rightSplashes": [
+          { "prefix": "orange1" },
+          { "prefix": "orange2" },
+          { "prefix": "orange3" }
+        ],
+        "upSplashes": [
+          { "prefix": "green1" },
+          { "prefix": "green2" },
+          { "prefix": "green3" }
+        ],
+        "downSplashes": [
+          { "prefix": "blue1" },
+          { "prefix": "blue2" },
+          { "prefix": "blue3" }
+        ]
+      }
+    },
+    "holdNoteCover": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/pyoroNoteHoldCover",
+      "scale": 6.0,
+      "isPixel": true,
+      "offsets": [29, -4],
+      "data": {
+        "enabled": true,
+        "left": {
+          "start": { "prefix": "loop0000" },
+          "hold": { "prefix": "loop" },
+          "end": { "prefix": "explode" }
+        },
+        "right": {
+          "start": { "prefix": "loop0000" },
+          "hold": { "prefix": "loop" },
+          "end": { "prefix": "explode" }
+        },
+        "up": {
+          "start": { "prefix": "loop0000" },
+          "hold": { "prefix": "loop" },
+          "end": { "prefix": "explode" }
+        },
+        "down": {
+          "start": { "prefix": "loop0000" },
+          "hold": { "prefix": "loop" },
+          "end": { "prefix": "explode" }
+        }
+      }
+    },
+    "countdownThree": {
+      "data": {
+        "audioPath": "gameplay/countdown/kapi/introTick"
+      },
+      "assetPath": null
+    },
+    "countdownTwo": {
+      "data": {
+        "audioPath": "gameplay/countdown/kapi/introTick"
+      },
+      "assetPath": "ui/countdown/funkin/ready",
+      "scale": 0.001,
+      "isPixel": false
+    },
+    "countdownOne": {
+      "data": {
+        "audioPath": "gameplay/countdown/kapi/introTick"
+      },
+      "assetPath": "ui/countdown/funkin/set",
+      "scale": 0.001,
+      "isPixel": false
+    },
+    "countdownGo": {
+      "data": {
+        "audioPath": "gameplay/countdown/kapi/introGO"
+      },
+      "assetPath": "ui/countdown/funkin/go",
+      "scale": 0.001,
+      "isPixel": false
+    },
+    "judgementSick": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/sick",
+      "scale": 4.2,
+      "isPixel": true
+    },
+    "judgementGood": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/good",
+      "scale": 4.2,
+      "isPixel": true
+    },
+    "judgementBad": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/bad",
+      "scale": 4.2,
+      "isPixel": true
+    },
+    "judgementShit": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/shit",
+      "scale": 4.2,
+      "isPixel": true
+    },
+    "comboNumber0": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num0",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber1": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num1",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber2": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num2",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber3": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num3",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber4": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num4",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber5": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num5",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber6": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num6",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber7": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num7",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber8": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num8",
+      "isPixel": true,
+      "scale": 4.2
+    },
+    "comboNumber9": {
+      "assetPath": "shared:noteStyles/kapi/pyoro/popup/num9",
+      "isPixel": true,
+      "scale": 4.2
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+	"timeFormat": "ms",
+	"artist": "PaperKitty",
+	"charter": "Dipazio",
+	"playData": {
+		"stage": "kapiNewArcade",
+		"noteStyle": "kapiW2",
+		"ratings": {
+			"easy": 8,
+			"hard": 12,
+			"normal": 11
+		},
+		"album": "arcadeShowdown2",
+		"difficulties": ["easy", "normal", "hard"],
+		"characters": {"girlfriend": "kapi_speaker", "opponent": "kapi-new", "player": "bf"}
+	},
+	"songName": "Scratch Post",
+	"timeChanges": [
+		{"t": 0, "bpm": 195}
+	],
+	"generatedBy": "Psych Engine v1.0.3 - Chart Editor V-Slice Exporter",
+	"version": "2.2.3"
+}

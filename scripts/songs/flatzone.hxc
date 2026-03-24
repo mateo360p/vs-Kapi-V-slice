@@ -1,0 +1,17 @@
+package dipazio.song;
+
+import FlxG;
+import funkin.play.PlayState;
+import dipazio.song.KapiSong;
+
+class KapiFlatzoneSong extends KapiSong {
+    public function new() {
+        super('flatzone', null,
+        {
+            discord: {
+                enabled: true,
+                albumMod: "Kapi"
+            }
+        });
+    }
+}

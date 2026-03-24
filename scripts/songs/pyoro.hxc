@@ -1,0 +1,203 @@
+package dipazio.song;
+
+import flixel.FlxG;
+import funkin.play.PlayState;
+import dipazio.song.DpzSong;
+import flixel.util.FlxColor;
+import funkin.play.notes.Strumline;
+import funkin.play.notes.ScriptedStrumline;
+import funkin.util.ReflectUtil;
+import funkin.graphics.FunkinSprite;
+import flixel.FlxCamera;
+import funkin.Conductor;
+import dipazio.song.KapiSong;
+
+using StringTools;
+
+// Hi! welcome to a song where EVERYTHING IS SETTED AS NEEDED SO EVERYTHING LOOKS GOOD
+// no way like in psych engine! what old times
+// Please, don't try to add a character that is not pyoro here-
+class KapiPyoroSong extends KapiSong {
+    var mobileBoxesArray:Array<FunkinSprite> = [];
+    var camPyoro:FlxCamera;
+
+    var dummyStrumlineX:Float = null;
+    var dummyStrumlineY:Float = null;
+    var hasSettedDummies:Bool = false;
+
+    public function new() {
+        super('pyoro', null,
+        {
+            startDialogue: false, // Boolean, needs explanation?
+            endDialogue: false, // Boolean
+            freeplayDialogue: false, // Boolean
+            discordRich: true, // Boolean
+            albumMod: "Kapi" // String, the external site link getter for the songs album cover
+        });
+        onRestart.add(pyoroRestart);
+    }
+
+    public function pyoroRestart(event:ScriptEvent):Void {
+        stupidTrafficSprite?.cameras = [PlayState.instance.camCutouts];
+        camPyoro?.alpha = 0;
+        PlayState.instance?.camHUD?.alpha = 0;
+        PlayState.instance?.camCutscene?.fade(FlxColor.BLACK, 0, false, null, true);
+    }
+
+    override function onCreate(event:ScriptEvent):Void {
+        super.onCreate(event);
+        startMobileFix();
+    }
+
+    override function onStepHit(event):Void {
+        super.onStepHit(event);
+
+        switch (event.step) {
+            case 4: // Getting the strumline modded position
+                if (!hasSettedDummies) { // just end my life fr
+                    hasSettedDummies = true;
+                    dummyStrumlineY = PlayState.instance?.playerStrumline?.y - 122;
+                    if (FlxG.onMobile) {
+                        dummyStrumlineX = PlayState.instance?.playerStrumline?.x + 452;
+                        if (ReflectUtil.hasField(FlxG, "android")) dummyStrumlineY -= 10; // for some reason android has +10px on y for the notes that are not the default pixel ones-
+                    } else 
+                        dummyStrumlineX = PlayState.instance?.playerStrumline?.x - 30;
+                }
+            case 12: // Setting the strumline position
+                PlayState.instance?.playerStrumline?.x = dummyStrumlineX;
+                PlayState.instance?.playerStrumline?.y = dummyStrumlineY;
+            case 32: // Making the fkin game visible
+                PlayState.instance?.camCutscene?.fade(FlxColor.BLACK, 1.2, true, null, true);
+            case 46: // Adding the boxes' camera if applyable
+                if (camPyoro != null) DpzPlayStateModule.tween(camPyoro, {alpha: 1}, 1.2);
+            case 128: // Making the HUD visible
+                if (PlayState.instance?.camHUD != null) DpzPlayStateModule.tween(PlayState.instance.camHUD, {alpha: 1}, 5.2);
+            case 512:
+                callCityProp(1);
+            case 768:
+                callCityProp(2);
+            case 1024:
+                callCityProp(3);
+            case 1281: // Pyoro's lil dance
+                PlayState.instance?.currentStage?.getBoyfriend()?.animation?.play("lilDance", true);
+                PlayState.instance?.currentStage?.getBoyfriend()?.applyAnimationOffsets("lilDance");
+            case 1292:
+                callCityBG(1);
+            case 1294:
+                callCityBG(2);
+            case 1296:
+                callCityBG(3);
+            case 1298:
+                callCityBG(4);
+            case 1408:
+                callCityProp(4);
+            case 1792:
+                callCityProp(5);
+        }
+    }
+
+    override function onNoteGhostMiss(event) {
+        if (Conductor.instance == null || (!(Conductor.instance.currentStep < 256) &&
+            !(Conductor.instance.currentStep > 1279 && Conductor.instance.currentStep < 1536))) {
+            super.onNoteGhostMiss(event);
+            return;
+        }
+        event.cancel(); // ghostapping, I'm too lazy to find a way so the player doesn't fkin cancels the pyoro jumping anim
+    }
+
+    override function onDestroy(event) {
+        camPyoro?.destroy();
+		camPyoro = null;
+
+        super.onDestroy(event);
+        for (i in 0...mobileBoxesArray.length) {
+            mobileBoxesArray[i].kill();
+            mobileBoxesArray[i].destroy();
+            mobileBoxesArray[i] = null;
+        }
+        mobileBoxesArray = [];
+    }
+
+    private function callCityProp(num:Int):Void {
+        PlayState.instance?.currentStage?.scriptCall("addCityProp", [num]);
+    }
+
+    private function callCityBG(num:Int = null):Void {
+        PlayState.instance?.currentStage?.scriptCall("changeBG", [num]);
+    }
+
+    function startMobileFix():Void {
+		if (!FlxG.onMobile) return;
+		var Playstate = PlayState.instance;
+		if (Playstate == null) return;
+
+        dummyStrumlineX = null;
+        dummyStrumlineY = null;
+        hasSettedDummies = false;
+
+        createMobileBoxes();
+
+		var oldStrum = Playstate.playerStrumline;
+        var newStrum = new Strumline(Playstate.noteStyle, !Playstate.isBotPlayMode, oldStrum.scrollSpeed);
+		newStrum.x = oldStrum.x; newStrum.y = oldStrum.y; newStrum.zIndex = oldStrum.zIndex;
+		newStrum.cameras = oldStrum.cameras;
+		newStrum.applyNoteData(oldStrum.noteData);
+
+		Playstate.remove(oldStrum);
+		Playstate.playerStrumline = newStrum;
+		Playstate.add(newStrum);
+		Playstate.refresh();
+
+		trace("INITIALIZED MOBILE PYORO STRUMLINE");
+		Playstate.regenNoteData(Playstate.startTimestamp);
+		Playstate.playerStrumline.fadeInArrows();
+	}
+
+    public function createMobileBoxes():Void {
+        if (!FlxG.onMobile) return;
+
+        camPyoro = new FlxCamera(); camPyoro.bgColor = 0x00000000;
+        camPyoro.alpha = 0;
+		if (!FlxG.cameras?.contains(camPyoro)) {
+			//FlxG.cameras.add(camPyoro, false);
+            var index = FlxG.cameras.list.indexOf(PlayState.instance.camCutscene);
+            FlxG.cameras.insert(camPyoro, index, false);
+        }
+
+        for (i in 0...mobileBoxesArray.length) {
+            mobileBoxesArray[i]?.kill(); // idk man
+            mobileBoxesArray[i]?.destroy();
+            mobileBoxesArray[i] = null;
+        }
+        mobileBoxesArray = [];
+
+        final hintWidth:Int = 146; final hintHeight:Int = 149; final noteSpacing:Int = 80;
+        final xPos:Int = Math.floor((FlxG.width - (hintWidth + noteSpacing) * Strumline.DIRECTIONS.length) / 2);
+        final yPos:Int = Math.floor(FlxG.height - hintHeight - 24);
+
+        for (i in Strumline.DIRECTIONS) {
+            var temp:FunkinSprite = new FunkinSprite().loadTexture("kapiStage/pyoro/box");
+            temp.setSize(hintWidth, hintHeight);
+            temp.updateHitbox();
+            temp.x = xPos + i * (hintWidth + noteSpacing);
+            temp.y = yPos;
+            temp.antialiasing = false;
+            var daColor:FlxColor = FlxColor.WHITE;
+            switch (i) {
+                case 0:
+                    daColor = 0xFFffeabe; // yellow color
+                case 1:
+                    daColor = 0xFFa6d4ff; // blue color
+                case 2:
+                    daColor = 0xFFb7f593; // green color
+                default:
+                    daColor = 0xFFfeb1b7; // red color
+            }
+            temp.color = daColor;
+            temp.alpha = 0.72;
+            temp.cameras = [camPyoro];
+            PlayState.instance.add(temp);
+            mobileBoxesArray.push(temp);
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "",
+        "fadeTime": 0,
+        "looped": false
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "laugh",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Oh chicos..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Vaamos. Obviamente te gane."]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "what",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ja, ni en broma."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "stare",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "mad",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Va.", " Te mostrare."]
+        }
+    ]
+}

@@ -1,9 +1,10 @@
 {
 	"timeFormat": "ms",
 	"artist": "Mike Geno",
-	"charter": "Unknown",
+	"charter": "Dipazio",
 	"playData": {
 		"stage": "kapiArcadeSunset",
+		"songVariations": ["erect"],
 		"noteStyle": "kapiW1",
 		"ratings": {
 			"easy": 3,

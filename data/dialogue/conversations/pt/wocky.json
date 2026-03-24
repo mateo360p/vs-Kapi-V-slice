@@ -1,0 +1,79 @@
+{
+    "version": "1.0.0",
+
+    "backdrop": {
+        "type": "solid",
+        "fadeTime": 2.0,
+        "color": "#BFB3DFD8"
+    },
+
+    "music": {
+        "asset": "dialogue/fuzzball",
+        "fadeTime": 0,
+        "looped": true
+    },
+
+    "outro": {
+        "type": "fade",
+        "fadeTime": 1.0
+    },
+
+    "dialogue": [
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Bro! Quanto tempo sem te ver!!"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "wap",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Levando tua nova mina pra um encontro?"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Sim", ", qual e?"]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "wap",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ela ta muito fora da tua liga, bro..."]
+        },
+        {
+            "speaker": "kapi",
+            "speakerAnimation": "talk",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Ela seria perfeita pra alguem tipo eu!"]
+        },
+        {
+            "speaker": "kapi_gf",
+            "speakerAnimation": "wave",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["Entao me mostra o que tu tem!"]
+        },
+        {
+            "speaker": "kapi_bf",
+            "speakerAnimation": "what",
+            "box": "kapiBox",
+            "boxAnimation": "idle",
+
+            "text": ["...Serio, Girlfriend?"]
+        }
+    ]
+}

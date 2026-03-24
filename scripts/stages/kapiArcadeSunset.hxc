@@ -1,14 +1,10 @@
-import flixel.FlxG;
-import funkin.play.stage.Stage;
+package dipazio.stage;
 
-class KapiArcadeSunsetStage extends Stage
+import dipazio.stage.KapiArcadeClosedStage;
+
+class KapiArcadeSunsetStage extends KapiArcadeClosedStage
 {
     function new() {
         super('kapiArcadeSunset');
-    }
-
-    override function onBeatHit(event:SongTimeScriptEvent):Void {
-        super.onBeatHit(event);
-        getNamedProp('lights')?.playAnimation("idle" + FlxG.random.int(1, 3), true);
     }
 }

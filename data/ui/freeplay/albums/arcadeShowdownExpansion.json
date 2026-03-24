@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "VS. KAPI - ARCADE SHOWDOWN EXPANSION ALBUM",
+  "artists": [
+    "ipazio"
+  ],
+  "albumArtAsset": "freeplay/albumRoll/kapiModExpansion_album",
+  "albumTitleAsset": "freeplay/albumRoll/kapiModExpansion-text",
+    "albumTitleOffsets": [-10, -20]
+}
